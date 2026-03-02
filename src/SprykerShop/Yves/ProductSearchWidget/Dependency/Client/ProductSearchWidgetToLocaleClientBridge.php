@@ -22,9 +22,6 @@ class ProductSearchWidgetToLocaleClientBridge implements ProductSearchWidgetToLo
         $this->localeClient = $localeClient;
     }
 
-    /**
-     * @return string
-     */
     public function getCurrentLocale(): string
     {
         return $this->localeClient->getCurrentLocale();

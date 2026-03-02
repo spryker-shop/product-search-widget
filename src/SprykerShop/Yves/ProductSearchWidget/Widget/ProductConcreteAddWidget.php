@@ -22,13 +22,6 @@ class ProductConcreteAddWidget extends AbstractWidget implements WidgetInterface
      */
     protected const NAME = 'ProductConcreteAddWidget';
 
-    /**
-     * @param string $title
-     * @param string $submitButtonTitle
-     * @param string $redirectRouteName
-     * @param bool $isVerticalLayout
-     * @param array $additionalRedirectData
-     */
     public function __construct(
         string $title,
         string $submitButtonTitle,
@@ -73,9 +66,6 @@ class ProductConcreteAddWidget extends AbstractWidget implements WidgetInterface
         return '@ProductSearchWidget/views/product-quick-add/product-quick-add.twig';
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     protected function getProductQuickAddForm(): FormInterface
     {
         return $this->getFactory()->getProductQuickAddForm();

@@ -38,11 +38,6 @@ class ProductSearchWidgetDependencyProvider extends AbstractBundleDependencyProv
      */
     public const PLUGINS_PRODUCT_QUICK_ADD_FORM_EXPANDER = 'PLUGINS_PRODUCT_QUICK_ADD_FORM_EXPANDER';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -54,11 +49,6 @@ class ProductSearchWidgetDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addCatalogClient(Container $container): Container
     {
         $container->set(static::CLIENT_CATALOG, function (Container $container) {
@@ -70,11 +60,6 @@ class ProductSearchWidgetDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {
@@ -86,11 +71,6 @@ class ProductSearchWidgetDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addLocaleClient(Container $container): Container
     {
         $container->set(static::CLIENT_LOCALE, function (Container $container) {
@@ -100,11 +80,6 @@ class ProductSearchWidgetDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addProductQuickAddFormExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_QUICK_ADD_FORM_EXPANDER, function () {

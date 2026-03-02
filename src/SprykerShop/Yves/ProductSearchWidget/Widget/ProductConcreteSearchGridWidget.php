@@ -21,9 +21,6 @@ class ProductConcreteSearchGridWidget extends AbstractWidget
      */
     protected const PARAMETER_PRODUCTS = 'products';
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaFilterTransfer|null $productConcreteCriteriaFilterTransfer
-     */
     public function __construct(?ProductConcreteCriteriaFilterTransfer $productConcreteCriteriaFilterTransfer = null)
     {
         if (!$productConcreteCriteriaFilterTransfer) {
@@ -57,11 +54,6 @@ class ProductConcreteSearchGridWidget extends AbstractWidget
         return '@ProductSearchWidget/views/product-concrete-search-list/product-concrete-search-list.twig';
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaFilterTransfer $productConcreteCriteriaFilterTransfer
-     *
-     * @return void
-     */
     protected function addProductsParameter(ProductConcreteCriteriaFilterTransfer $productConcreteCriteriaFilterTransfer): void
     {
         $productViewTransfers = $this->getFactory()

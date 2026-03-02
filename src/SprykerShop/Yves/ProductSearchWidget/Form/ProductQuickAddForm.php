@@ -77,19 +77,11 @@ class ProductQuickAddForm extends AbstractType
      */
     protected const ERROR_MESSAGE_REDIRECT_SKU_EMPTY = 'product_quick_add_widget.form.error.sku.empty';
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return '';
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setRequired(static::OPTION_LOCALE);
@@ -188,11 +180,6 @@ class ProductQuickAddForm extends AbstractType
         return $this;
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Symfony\Component\Validator\Constraints\Length
-     */
     protected function createMinLengthConstraint(string $message): Length
     {
         return new Length([
@@ -201,11 +188,6 @@ class ProductQuickAddForm extends AbstractType
         ]);
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Symfony\Component\Validator\Constraints\NotBlank
-     */
     protected function createNotBlankConstraint(string $message): NotBlank
     {
         return new NotBlank([
@@ -213,12 +195,6 @@ class ProductQuickAddForm extends AbstractType
         ]);
     }
 
-    /**
-     * @param int $maxValue
-     * @param string $message
-     *
-     * @return \Symfony\Component\Validator\Constraints\LessThanOrEqual
-     */
     protected function createLessThanOrEqualConstraint(int $maxValue, string $message): LessThanOrEqual
     {
         return new LessThanOrEqual([

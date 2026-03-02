@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ProductViewTransfer;
 
 class ProductConcreteMapper implements ProductConcreteMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcretePageSearchTransfer $productConcretePageSearchTransfer
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductViewTransfer
-     */
     public function mapProductConcretePageSearchTransferToProductViewTransfer(
         ProductConcretePageSearchTransfer $productConcretePageSearchTransfer,
         ProductViewTransfer $productViewTransfer

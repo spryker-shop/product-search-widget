@@ -34,10 +34,6 @@ class ProductConcreteReader implements ProductConcreteReaderInterface
      */
     protected $productConcreteMapper;
 
-    /**
-     * @param \SprykerShop\Yves\ProductSearchWidget\Dependency\Client\ProductSearchWidgetToCatalogClientInterface $catalogClient
-     * @param \SprykerShop\Yves\ProductSearchWidget\Mapper\ProductConcreteMapperInterface $productConcreteMapper
-     */
     public function __construct(
         ProductSearchWidgetToCatalogClientInterface $catalogClient,
         ProductConcreteMapperInterface $productConcreteMapper

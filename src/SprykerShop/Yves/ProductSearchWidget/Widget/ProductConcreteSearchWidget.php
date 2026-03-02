@@ -19,13 +19,6 @@ class ProductConcreteSearchWidget extends AbstractWidget
      */
     protected const NAME = 'ProductConcreteSearchWidget';
 
-    /**
-     * @param string $index
-     * @param string $skuFieldName
-     * @param string|null $skuFieldValue
-     * @param string|null $searchFieldValue
-     * @param int|null $searchResultLimit
-     */
     public function __construct(
         string $index,
         string $skuFieldName,

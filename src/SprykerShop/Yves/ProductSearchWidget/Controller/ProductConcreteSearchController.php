@@ -34,11 +34,6 @@ class ProductConcreteSearchController extends AbstractController
      */
     protected const PARAM_LIMIT = 'limit';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Spryker\Yves\Kernel\View\View
-     */
     public function indexAction(Request $request): View
     {
         $productConcreteCriteriaFilterTransfer = $this->createProductConcreteCriteriaFilterTransfer($request);
@@ -51,11 +46,6 @@ class ProductConcreteSearchController extends AbstractController
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteCriteriaFilterTransfer $productConcreteCriteriaFilterTransfer
-     *
-     * @return array
-     */
     protected function searchProducts(ProductConcreteCriteriaFilterTransfer $productConcreteCriteriaFilterTransfer): array
     {
         $formattedProducts = $this->getFactory()
@@ -65,11 +55,6 @@ class ProductConcreteSearchController extends AbstractController
         return $formattedProducts[static::PRODUCT_CONCRETE_CATALOG_SEARCH_RESULT_FORMATTER_PLUGIN_NAME] ?? [];
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteCriteriaFilterTransfer
-     */
     protected function createProductConcreteCriteriaFilterTransfer(Request $request): ProductConcreteCriteriaFilterTransfer
     {
         $productConcreteCriteriaFilterTransfer = new ProductConcreteCriteriaFilterTransfer();

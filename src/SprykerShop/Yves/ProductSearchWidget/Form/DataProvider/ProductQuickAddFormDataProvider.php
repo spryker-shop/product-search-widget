@@ -17,17 +17,11 @@ class ProductQuickAddFormDataProvider
      */
     protected $localeClient;
 
-    /**
-     * @param \SprykerShop\Yves\ProductSearchWidget\Dependency\Client\ProductSearchWidgetToLocaleClientInterface $localeClient
-     */
     public function __construct(ProductSearchWidgetToLocaleClientInterface $localeClient)
     {
         $this->localeClient = $localeClient;
     }
 
-    /**
-     * @return array
-     */
     public function getOptions(): array
     {
         return [

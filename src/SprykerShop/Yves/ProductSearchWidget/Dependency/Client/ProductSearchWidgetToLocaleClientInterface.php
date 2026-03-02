@@ -9,8 +9,5 @@ namespace SprykerShop\Yves\ProductSearchWidget\Dependency\Client;
 
 interface ProductSearchWidgetToLocaleClientInterface
 {
-    /**
-     * @return string
-     */
     public function getCurrentLocale(): string;
 }
