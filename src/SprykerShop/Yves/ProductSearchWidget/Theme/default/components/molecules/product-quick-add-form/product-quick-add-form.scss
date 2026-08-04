@@ -1,7 +1,14 @@
+@use 'sass:meta';
+@use 'sass:map';
+
 @mixin product-search-widget-product-quick-add-form($name: '.product-quick-add-form') {
     #{$name} {
+        @if meta.mixin-exists(product-search-widget-product-quick-add-form-base-hook) {
+            @include product-search-widget-product-quick-add-form-base-hook;
+        }
+
         &--row {
-            padding: map-get($setting-spacing, 'default');
+            padding: map.get($setting-spacing, 'default');
             background-color: $setting-color-lighter;
         }
 
@@ -23,6 +30,10 @@
     @include product-search-widget-product-quick-add-form();
 
     #{$name} {
+        @if meta.mixin-exists(product-quick-add-widget-product-quick-add-form-base-hook) {
+            @include product-quick-add-widget-product-quick-add-form-base-hook;
+        }
+
         @content;
     }
 }

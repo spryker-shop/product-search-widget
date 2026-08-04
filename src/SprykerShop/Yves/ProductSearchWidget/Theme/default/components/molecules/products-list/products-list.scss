@@ -1,5 +1,11 @@
+@use 'sass:meta';
+
 @mixin product-search-widget-products-list($name: '.products-list') {
     #{$name} {
+        @if meta.mixin-exists(product-search-widget-products-list-base-hook) {
+            @include product-search-widget-products-list-base-hook;
+        }
+
         &__item {
             cursor: pointer;
 

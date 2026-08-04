@@ -1,5 +1,11 @@
+@use 'sass:meta';
+
 @mixin product-search-widget-product-search-item($name: '.product-search-item') {
     @include shop-ui-product-item-list($name) {
+        @if meta.mixin-exists(product-search-widget-product-search-item-base-hook) {
+            @include product-search-widget-product-search-item-base-hook;
+        }
+
         @content;
     }
 }
