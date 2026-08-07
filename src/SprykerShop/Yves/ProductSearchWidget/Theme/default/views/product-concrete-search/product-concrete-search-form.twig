@@ -8,6 +8,7 @@
     searchResultLimit: _widget.searchResultLimit,
     injectorsExtraQueryValueClassName: '',
     autocompleteFormClassName: '',
+    suggestionsUrl: path('product-search/product-concrete-search'),
 } %}
 
 {% block body %}
@@ -18,7 +19,7 @@
             name: data.skuFieldName,
             hiddenValue: data.skuFieldValue,
             value: data.searchFieldValue,
-            suggestionsUrl: path('product-search/product-concrete-search'),
+            suggestionsUrl: data.suggestionsUrl,
             placeholder: 'quick-order.input.placeholder',
         },
         attributes: {

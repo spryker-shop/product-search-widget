@@ -38,7 +38,6 @@ class ProductSearchWidgetRouteProviderPlugin extends AbstractRouteProviderPlugin
 
     /**
      * {@inheritDoc}
-     * - Adds Routes to the RouteCollection.
      *
      * @api
      */

@@ -13,7 +13,7 @@
     {% if data.products is not empty %}
         {% for product in data.products %}
             {% set selectedItem = loop.first ? config.name ~ '__item--selected' : '' %}
-            <li class="list__item spacing-y spacing-y--inner {{ config.name }}__item {{ selectedItem }}" data-value="{{ product.sku }}">
+            <li class="list__item spacing-y spacing-y--inner {{ config.name }}__item {{ selectedItem }}" data-value="{{ product.sku }}" data-label="{{ product.name }} ({{ product.sku }})" data-price="{{ product.price is defined ? product.price : '' }}" data-name="{{ product.name }}">
                 {% widget 'ProductDiscontinuedWidget' args [product.sku] only %}
                     {% block body %}
                         {% if data.discontinuedProduct is not empty %}
@@ -22,6 +22,9 @@
                     {% endblock %}
                 {% endwidget %}
                 {{ product.name }} ({{ product.sku }})
+                {% if product.price is defined and product.price is not null %}
+                    <span class="{{ config.name }}__price text-muted float-right">{{ product.price | money }}</span>
+                {% endif %}
             </li>
         {% endfor %}
     {% else %}
