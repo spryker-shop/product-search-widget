@@ -15,6 +15,10 @@
         {% endblock %}
     {% endfor %}
 
+    {% block productTrackingDetails %}
+        {% widget 'ProductTrackingDetailsWidget' args [data.products] only %}{% endwidget %}
+    {% endblock %}
+
     {% if data.products is empty %}
         <p>{{ 'product_search_widget.search.no_results' | trans }}</p>
     {% endif %}
